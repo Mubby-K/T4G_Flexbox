@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Umoja Foundation</title>
+    <link rel="stylesheet" href="../src/style.css">
+</head>
+<body>
+
+    <!-- HEADER / NAVIGATION SYSTEM-WIDE -->
+    <header>
+       <div class="nav-container">
+            <a href="#" class="logo"><img src="images/logo.png" alt="Umoja Foundation Logo"></a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="donate.html">Donate</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="project.html">Projects</a></li>
+                <li><a href="signup.html">Member Login</a></li>
+                <li><a href="login.html">Admin Login</a></li>
+                <li><a href="safe-schools.html">Safe Schools</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- MAIN LOGIN CONTAINER SPLIT GRID -->
+    <main class="login-page-wrapper">
+        <div class="login-split-grid">
+            
+            <!-- Left Column: Community Narrative Background -->
+            <div class="login-narrative-side">
+                <div class="narrative-overlay-content">
+                    <h1>JOIN OUR COMMUNITY</h1>
+                    <p>Become a vital part of sustainable change. Gain access to program analytics, volunteer coordination dashboards, and transparent impact tracking frameworks.</p>
+                </div>
+            </div>
+
+            <!-- Right Column: Interactive Credentials Form Portal -->
+            <div class="login-form-side">
+                <div class="login-box-container">
+                    <div class="login-form-header">
+                        <h2>LOGIN</h2>
+                    </div>
+                    
+                    <form action="#" method="POST" class="umoja-login-form">
+                        <div class="form-group">
+                            <label for="login-email">Email Address</label>
+                            <input type="email" id="login-email" name="email" placeholder="email@example.com" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="login-password">Password</label>
+                            <input type="password" id="login-password" name="password" placeholder="••••••••" required>
+                        </div>
+
+                        <div class="form-utility-row">
+                            <a href="#" class="forgot-password-link">Forgot Password?</a>
+                        </div>
+
+                        <!-- Action Submit Triggers -->
+                        <button type="submit" class="btn btn-login-submit">Login</button>
+                    </form>
+
+                    <!-- Alternative Portal Onboarding Action Link -->
+                    <div class="form-signup-prompt">
+                        <p>Don't have an account yet? <a href="#">Sign up here</a></p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- FOOTER SYSTEM-WIDE -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-about">
+                    <h3 style="color: #fff; font-weight:700; margin-bottom: 10px;">UMOJA</h3>
+                    <p>Umoja Foundation - "Safe Schools, Safe Girls" Development Framework.</p>
+                </div>
+                <div class="footer-column">
+                    <h4>Site Map</h4>
+                    <ul>
+                        <li><a href="#">Projects</a></li>
+                        <li><a href="#">Media Hub</a></li>
+                        <li><a href="#">Get Involved</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Access Portals</h4>
+                    <ul>
+                        <li><a href="#">Partner Portal</a></li>
+                        <li><a href="#">Volunteer Database</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div>&copy; 2026 Umoja Foundation. All rights reserved.</div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

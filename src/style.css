@@ -1,0 +1,999 @@
+/* --- DESIGN SYSTEM TOKENS --- */
+:root {
+    --color-terracotta: #A55A3F;
+    --color-dark-blue: #1E2A38;
+    --color-light-bg: #F4ECE5;
+    --color-white: #FFFFFF;
+    --color-text-dark: #333333;
+    
+    --font-main: 'Inter', sans-serif;
+}
+
+/* --- GLOBAL STYLES --- */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-main);
+    color: var(--color-text-dark);
+    background-color: var(--color-white);
+    line-height: 1.6;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* --- BUTTONS --- */
+.btn {
+    display: inline-block;
+    background-color: var(--color-terracotta);
+    color: var(--color-white);
+    padding: 10px 24px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+    border-radius: 2px;
+    transition: background-color 0.3s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #8c4a32;
+}
+
+/* --- HEADER & NAV --- */
+header {
+    background-color: var(--color-white);
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo {
+    font-weight: 700;
+    font-size: 1.4rem;
+    color: var(--color-terracotta);
+    text-decoration: none;
+}
+/* Target the image inside the logo link */
+.logo img {
+    width: 150px;      /* Adjust this value to change the width */
+    height: auto;       /* Keeps the original aspect ratio so it doesn't stretch */
+    display: block;     /* Removes extra whitespace below the image */
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--color-dark-blue);
+    font-weight: 500;
+    font-size: 0.95rem;
+}
+
+.nav-links a:hover {
+    color: var(--color-terracotta);
+}
+
+/* --- HERO SECTION --- */
+.hero {
+    position: relative;
+    background: linear-gradient(rgba(30, 42, 56, 0.55), rgba(30, 42, 56, 0.55)), 
+                url('https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?q=80&w=1200') no-repeat center center/cover;
+    height: 480px;
+    display: flex;
+    align-items: center;
+    color: var(--color-white);
+}
+
+.hero-content {
+    max-width: 550px;
+}
+
+.hero h1 {
+    font-size: 2.8rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    letter-spacing: -0.5px;
+}
+
+/* --- FEATURED PROJECTS --- */
+.projects-section {
+    padding: 60px 0;
+    text-align: center;
+}
+
+.section-title {
+    font-size: 1.8rem;
+    color: var(--color-dark-blue);
+    margin-bottom: 40px;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.project-card {
+    background: var(--color-white);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.project-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+.project-card h3 {
+    font-size: 1.2rem;
+    color: var(--color-dark-blue);
+    margin-bottom: 15px;
+}
+
+.project-card .btn {
+    margin-top: auto;
+    padding: 8px 20px;
+}
+
+/* --- MID-PAGE CALL TO ACTION --- */
+.cta-mid {
+    background-color: var(--color-light-bg);
+    padding: 50px 0;
+    text-align: center;
+}
+
+.cta-mid h2 {
+    font-size: 1.8rem;
+    color: var(--color-dark-blue);
+    margin-bottom: 25px;
+}
+
+.donation-options {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.donation-badge {
+    background: var(--color-white);
+    padding: 10px 25px;
+    font-weight: 600;
+    border: 1px solid rgba(0,0,0,0.1);
+    color: var(--color-dark-blue);
+}
+
+/* --- FOOTER --- */
+footer {
+    background-color: var(--color-dark-blue);
+    color: var(--color-white);
+    padding: 60px 0 30px;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 2fr repeat(3, 1fr);
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.footer-about p {
+    font-size: 0.9rem;
+    opacity: 0.8;
+    margin-bottom: 20px;
+    max-width: 320px;
+}
+
+.footer-column h4 {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    color: var(--color-white);
+}
+
+.footer-column ul {
+    list-style: none;
+}
+
+.footer-column ul li {
+    margin-bottom: 10px;
+}
+
+.footer-column ul li a {
+    color: var(--color-white);
+    opacity: 0.7;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: opacity 0.2s;
+}
+
+.footer-column ul li a:hover {
+    opacity: 1;
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.85rem;
+    opacity: 0.6;
+}
+
+.footer-bottom-links a {
+    color: var(--color-white);
+    text-decoration: none;
+    margin-left: 20px;
+}
+/* ==========================================================================
+   ABOUT PAGE EXCLUSIVE STYLES
+   ========================================================================== */
+
+/* --- ABOUT HERO SECTION --- */
+.about-hero {
+    position: relative;
+    background: linear-gradient(rgba(30, 42, 56, 0.4), rgba(30, 42, 56, 0.4)), 
+                url('https://images.unsplash.com/photo-1524178232363-1fb2b075b655?q=80&w=1200') no-repeat center center/cover;
+    height: 440px;
+    display: flex;
+    align-items: center;
+    color: var(--color-white);
+}
+
+.hero-box {
+    background-color: rgba(165, 90, 63, 0.9); /* Terracotta overlay box */
+    padding: 40px;
+    max-width: 500px;
+    border-radius: 2px;
+}
+
+.hero-box h1 {
+    font-size: 2.2rem;
+    line-height: 1.3;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+/* --- OUR MISSION SECTION --- */
+.mission-section {
+    background-color: var(--color-light-bg);
+    padding: 60px 0;
+    text-align: center;
+}
+
+.mission-section h2 {
+    font-size: 1.6rem;
+    color: var(--color-dark-blue);
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.mission-text {
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 1.05rem;
+    color: var(--color-dark-blue);
+    opacity: 0.9;
+}
+
+/* --- THE UMOJA TEAM SECTION --- */
+.team-section {
+    padding: 80px 0;
+    text-align: center;
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+}
+
+.team-card {
+    background: var(--color-white);
+    text-align: center;
+}
+
+.team-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 2px;
+    margin-bottom: 15px;
+}
+
+.team-card h3 {
+    font-size: 1.1rem;
+    color: var(--color-dark-blue);
+    margin-bottom: 5px;
+}
+
+.team-card p {
+    font-size: 0.9rem;
+    color: var(--color-terracotta);
+    font-weight: 600;
+}
+
+/* --- IMPACT & PILLARS SECTION --- */
+.impact-section {
+    background-color: #FAFAFA;
+    padding: 80px 0;
+    text-align: center;
+}
+
+.value-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.value-card {
+    background: var(--color-white);
+    padding: 40px 30px;
+    border-radius: 4px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.03);
+    text-align: center;
+}
+
+.value-icon {
+    width: 60px;
+    height: 60px;
+    margin: 0 auto 20px;
+    background-color: var(--color-light-bg);
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.value-icon svg {
+    width: 30px;
+    height: 30px;
+    fill: var(--color-terracotta);
+}
+
+.value-card h3 {
+    font-size: 1.2rem;
+    color: var(--color-dark-blue);
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+.value-card p {
+    font-size: 0.95rem;
+    color: #666;
+}
+/* ==========================================================================
+   CONTACT PAGE EXCLUSIVE STYLES
+   ========================================================================== */
+
+/* Page Background Layout Base Wrapper */
+.contact-main {
+    background-color: #FBF5EF; /* Creamy off-white/beige tint background from the mockup */
+    padding: 60px 0;
+}
+
+.contact-grid-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: start;
+}
+
+/* Left Content Details Side Styles */
+.contact-info-side h1 {
+    font-size: 2.2rem;
+    color: var(--color-dark-blue);
+    font-weight: 700;
+    margin-bottom: 25px;
+    letter-spacing: 0.5px;
+}
+
+.contact-image-wrapper {
+    width: 100%;
+    border-radius: 4px;
+    overflow: hidden;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.contact-image-wrapper img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.office-details h3 {
+    font-size: 1.15rem;
+    color: var(--color-dark-blue);
+    margin-bottom: 15px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+.office-details p {
+    font-size: 0.95rem;
+    color: var(--color-text-dark);
+    margin-bottom: 10px;
+    line-height: 1.5;
+}
+
+/* Right Interactive Input Form Box Styles */
+.contact-form-side h2 {
+    font-size: 1.5rem;
+    color: var(--color-dark-blue);
+    margin-bottom: 5px;
+    font-weight: 700;
+}
+
+.form-subtext {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+.umoja-form .form-group {
+    margin-bottom: 20px;
+}
+
+.umoja-form label {
+    display: block;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 6px;
+    color: var(--color-dark-blue);
+}
+
+.umoja-form input[type="text"],
+.umoja-form input[type="email"],
+.umoja-form textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    background-color: var(--color-white);
+    font-family: var(--font-main);
+    font-size: 0.9rem;
+    border-radius: 4px;
+    color: var(--color-text-dark);
+    transition: border-color 0.2s ease;
+}
+
+.umoja-form input:focus,
+.umoja-form textarea:focus {
+    outline: none;
+    border-color: var(--color-terracotta);
+}
+
+.btn-submit-form {
+    width: 100%;
+    padding: 14px;
+    text-align: center;
+    font-size: 1rem;
+    text-transform: capitalize;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+/* Supplemental Nav States */
+.nav-links a.active {
+    color: var(--color-terracotta);
+    font-weight: 700;
+}
+
+/* Supplemental Metrics Strip Styling for Footer */
+.footer-metrics-strip {
+    font-size: 0.9rem;
+    opacity: 0.85;
+}
+.footer-metrics-strip span {
+    display: block;
+    margin-bottom: 8px;
+}
+/* ==========================================================================
+   DONATE PAGE EXCLUSIVE STYLES
+   ========================================================================== */
+
+/* Page Wrapper and Canvas Background */
+.donate-page-wrapper {
+    background-color: #FBF5EF; /* Light beige/sand background from design system mockup */
+    padding: 60px 0 100px;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.donate-title {
+    font-size: 2.2rem;
+    color: var(--color-dark-blue);
+    font-weight: 700;
+    margin-bottom: 40px;
+    letter-spacing: 0.5px;
+}
+
+/* Centered Layout Donation Card Block */
+.donate-card-container {
+    max-width: 680px;
+    margin: 0 auto;
+    background-color: var(--color-white);
+    border-radius: 4px;
+    overflow: hidden;
+    box-shadow: 0 4px 25px rgba(0, 0, 0, 0.04);
+}
+
+.donate-card-banner img {
+    width: 100%;
+    height: 340px;
+    object-fit: cover;
+}
+
+.donate-card-body {
+    padding: 40px 50px;
+}
+
+/* Form Selection Blocks & Grid Structure */
+.form-section-group {
+    margin-bottom: 30px;
+    text-align: left;
+}
+
+.section-label {
+    display: block;
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--color-dark-blue);
+    margin-bottom: 12px;
+    letter-spacing: 0.5px;
+}
+
+/* Button Selection Interactivity Elements */
+.amount-selection-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 12px;
+}
+
+.amount-pill, 
+.toggle-pill {
+    background-color: #F4ECE5; /* Light fallback system background token tint */
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    color: var(--color-dark-blue);
+    padding: 12px 10px;
+    font-family: var(--font-main);
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+    text-align: center;
+}
+
+.amount-pill:hover,
+.toggle-pill:hover {
+    background-color: rgba(30, 42, 56, 0.1);
+}
+
+/* Active Status Design Modifiers */
+.amount-pill.active,
+.toggle-pill.active {
+    background-color: var(--color-dark-blue);
+    color: var(--color-white);
+    border-color: var(--color-dark-blue);
+}
+
+.toggle-selection-row {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+}
+
+/* Input Fields Box Styling */
+.input-field-wrapper input {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    background-color: #FAFAFA;
+    border-radius: 4px;
+    font-family: var(--font-main);
+    font-size: 0.95rem;
+    color: var(--color-text-dark);
+}
+
+.input-field-wrapper input:focus {
+    outline: none;
+    border-color: var(--color-terracotta);
+    background-color: var(--color-white);
+}
+
+/* CTA Execution Actions */
+.btn-process-donation {
+    width: 100%;
+    padding: 16px;
+    font-size: 1.05rem;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+    font-weight: 700;
+    margin-top: 10px;
+    letter-spacing: 0.5px;
+}
+
+/* Secure Trust Seal Row Elements */
+.trust-badge-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 25px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.trust-badge-icon {
+    font-size: 1.4rem;
+}
+
+.trust-badge-container p {
+    font-size: 0.8rem;
+    color: #777;
+    text-align: left;
+    line-height: 1.4;
+}
+
+/* Extra Active Nav Rule Fixes */
+.header-donate-btn {
+    padding: 8px 18px;
+    margin-left: 10px;
+}
+/* ==========================================================================
+   LOGIN PAGE EXCLUSIVE STYLES
+   ========================================================================= */
+
+/* Main Full-Height Container Framework layout split */
+.login-page-wrapper {
+    background-color: #FBF5EF; /* Consistent background layout token canvas tint */
+    min-height: calc(100vh - 81px - 250px); /* Adjusts perfectly matching context viewport minus header and footer */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-split-grid {
+    display: grid;
+    grid-template-columns: 1.1fr 1fr;
+    width: 100%;
+    max-width: 1100px;
+    margin: 40px 20px;
+    background-color: var(--color-white);
+    border-radius: 4px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+/* Left Section: Community Creative Photo Wall Graphics and Narrative text block */
+.login-narrative-side {
+    position: relative;
+    background: linear-gradient(rgba(30, 42, 56, 0.75), rgba(30, 42, 56, 0.75)), 
+                url('https://images.unsplash.com/photo-1509062522246-3755977927d7?q=80&w=800') no-repeat center center/cover;
+    padding: 60px;
+    display: flex;
+    align-items: center;
+    color: var(--color-white);
+}
+
+.narrative-overlay-content max-width {
+    max-width: 440px;
+}
+
+.login-narrative-side h1 {
+    font-size: 2.4rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    letter-spacing: 0.5px;
+}
+
+.login-narrative-side p {
+    font-size: 1rem;
+    line-height: 1.6;
+    opacity: 0.85;
+}
+
+/* Right Section: Form Fields Layout Interface */
+.login-form-side {
+    padding: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-white);
+}
+
+.login-box-container {
+    width: 100%;
+    max-width: 380px;
+}
+
+.login-form-header h2 {
+    font-size: 1.8rem;
+    color: var(--color-dark-blue);
+    font-weight: 700;
+    margin-bottom: 30px;
+    letter-spacing: 0.5px;
+}
+
+/* Form inputs & Structural fields controls */
+.umoja-login-form .form-group {
+    margin-bottom: 20px;
+}
+
+.umoja-login-form label {
+    display: block;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: var(--color-dark-blue);
+}
+
+.umoja-login-form input[type="email"],
+.umoja-login-form input[type="password"] {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    background-color: #FAFAFA;
+    border-radius: 4px;
+    font-family: var(--font-main);
+    font-size: 0.95rem;
+    color: var(--color-text-dark);
+    transition: all 0.2s ease;
+}
+
+.umoja-login-form input:focus {
+    outline: none;
+    border-color: var(--color-terracotta);
+    background-color: var(--color-white);
+}
+
+/* Utility elements links row rules */
+.form-utility-row {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 25px;
+}
+
+.forgot-password-link {
+    font-size: 0.85rem;
+    color: var(--color-terracotta);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.forgot-password-link:hover {
+    text-decoration: underline;
+}
+
+/* Submission interactive action button layout metrics */
+.btn-login-submit {
+    width: 100%;
+    padding: 14px;
+    font-size: 1rem;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+    font-weight: 700;
+}
+
+/* Bottom Registration Prompt Block routing rules links */
+.form-signup-prompt {
+    margin-top: 30px;
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.form-signup-prompt p {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.form-signup-prompt a {
+    color: var(--color-terracotta);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.form-signup-prompt a:hover {
+    text-decoration: underline;
+}
+/* ==========================================================================
+   PROJECTS PAGE EXCLUSIVE STYLES
+   ========================================================================== */
+
+/* Page Header Intro Context */
+.projects-intro {
+    background-color: #FBF5EF; /* Core design template cream canvas tint */
+    padding: 60px 0 40px;
+}
+
+.projects-intro h1 {
+    font-size: 2.5rem;
+    color: var(--color-dark-blue);
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.intro-subtext {
+    font-size: 1.1rem;
+    color: #555;
+    font-weight: 400;
+}
+
+/* Primary Main 6-Card Layout Grid Configuration */
+.projects-grid-section {
+    background-color: #FBF5EF;
+    padding: 0 0 60px 0;
+}
+
+.main-projects-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.grid-project-card {
+    background-color: var(--color-white);
+    border-radius: 4px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+    display: flex;
+    flex-direction: column;
+}
+
+.grid-project-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.grid-project-card .card-content {
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    text-align: left;
+}
+
+.grid-project-card h3 {
+    font-size: 1.1rem;
+    color: var(--color-dark-blue);
+    margin-bottom: 12px;
+    font-weight: 700;
+    line-height: 1.4;
+    min-height: 44px; /* Synchronizes card heading levels */
+}
+
+.grid-project-card p {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 20px;
+    line-height: 1.5;
+    flex-grow: 1;
+}
+
+.btn-card-action {
+    align-self: flex-start;
+    padding: 8px 16px;
+    font-size: 0.85rem;
+}
+
+/* Feature Spotlight Layout Element Styles */
+.featured-project-row {
+    background-color: var(--color-white);
+    padding: 80px 0;
+}
+
+.featured-flex-container {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.featured-img-box {
+    flex: 1.2;
+    border-radius: 4px;
+    overflow: hidden;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.05);
+}
+
+.featured-content-box {
+    flex: 1;
+    text-align: left;
+}
+
+.featured-tag {
+    display: inline-block;
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--color-terracotta);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+
+.featured-content-box h2 {
+    font-size: 2rem;
+    color: var(--color-dark-blue);
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.featured-content-box p {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+/* Support Bottom Banner CTA Layout Elements */
+.support-cta-section {
+    background-color: #E2CDC0; /* Darker warm sand tone block directly matching mockup footer overlay */
+    padding: 60px 0;
+}
+
+.support-cta-section h2 {
+    font-size: 1.8rem;
+    color: var(--color-dark-blue);
+    margin-bottom: 8px;
+    font-weight: 700;
+}
+
+.support-cta-section p {
+    font-size: 1rem;
+    color: var(--color-dark-blue);
+    margin-bottom: 25px;
+    opacity: 0.9;
+}
+
+.btn-cta-dark {
+    background-color: var(--color-terracotta);
+    padding: 12px 30px;
+    font-size: 0.95rem;
+}
+
+.btn-cta-dark:hover {
+    background-color: var(--color-dark-blue);
+}
