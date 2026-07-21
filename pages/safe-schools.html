@@ -4,57 +4,70 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Safe Schools, Safe Girls - Umoja Foundation</title>
+    <!-- Link to your central stylesheet -->
     <link rel="stylesheet" href="../src/style.css">
 </head>
 <body>
 
     <!-- HEADER / NAVIGATION SYSTEM-WIDE -->
     <header>
-         <div class="nav-container">
-                <a href="#" class="logo"><img src="../images/logo.png" alt="Umoja Foundation Logo"></a>
-                <ul class="nav-links">
-                 <li><a href="../index.html">Home</a></li>
-                 <li><a href="about.html">About</a></li>
-                 <li><a href="donate.html">Donate</a></li>
-                 <li><a href="contact.html">Contact</a></li>
-                 <li><a href="project.html">Projects</a></li>
-                 <li><a href="signup.html">Member Signup</a></li>
-                 <li><a href="login.html">Admin Login</a></li>
-                 <li><a href="safe-schools.html">Safe Schools</a></li>
-                </ul>
-          </div>
-    </header>
-
-    <!-- INITIATIVE HERO HERO SECTION -->
-    <section class="about-hero" style="background: linear-gradient(rgba(30, 42, 56, 0.5), rgba(30, 42, 56, 0.5)), url('https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?q=80&w=1200') no-repeat center center/cover;">
-        <div class="container">
-            <div class="hero-box" style="max-width: 600px;">
-                <span class="featured-tag" style="color: #fff; margin-bottom: 5px;">Special Initiative</span>
-                <h1>Safe Schools, Safe Girls</h1>
-            </div>
+        <div class="nav-container">
+            <a href="../index.html" class="logo">
+                <img src="../images/logo.png" alt="Umoja Foundation Logo" onerror="this.src='https://via.placeholder.com/140x40?text=UMOJA'">
+            </a>
+            <ul class="nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="project.html">Projects</a></li>
+                <li><a href="safe-schools.html" class="active">Safe Schools</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="signup.html">Member Signup</a></li>
+                <li><a href="donate.html" class="btn header-donate-btn">Donate</a></li>
+            </ul>
         </div>
-    </section>
+    </header>
 
     <!-- CASE STUDY BRIEF -->
     <main class="contact-main">
-        <div class="container" style="max-width: 800px; background: #fff; padding: 50px; border-radius: 4px; box-shadow: 0 4px 15px rgba(0,0,0,0.02);">
-            <h2 style="color: var(--color-dark-blue); margin-bottom: 20px;">Project Overview</h2>
-            <p style="font-size: 1.1rem; line-height: 1.7; color: #444; margin-bottom: 25px;">
-                The <strong>Safe Schools, Safe Girls</strong> initiative focuses heavily on driving academic equality by removing infrastructure-based barriers. Using precise data compilation, community partnerships, and rigorous school audits, we construct customized private sanitation layouts and deliver menstrual hygiene resources directly to rural academic environments.
-            </p>
+        <div class="container">
+            <div class="initiative-content-card">
+                <h2>Project Overview</h2>
+                <p class="initiative-main-text">
+                    The <strong>Safe Schools, Safe Girls</strong> initiative focuses heavily on driving academic equality by removing infrastructure-based barriers[cite: 4]. Using precise data compilation, community partnerships, and rigorous school audits, we construct customized private sanitation layouts and deliver menstrual hygiene resources directly to rural academic environments[cite: 4].
+                </p>
 
-            <h3 style="color: var(--color-dark-blue); margin-bottom: 15px;">Key Objectives & Actions</h3>
-            <ul style="margin-left: 20px; margin-bottom: 30px; color: #555; line-height: 1.8;">
-                <li>Comprehensive audits of local school sanitation infrastructures.</li>
-                <li>Installation of eco-conscious, private wash facilities tailored for privacy and comfort.</li>
-                <li>Hosting recurring health, safety, and hygiene workshops led by regional advisors.</li>
-                <li>Compiling performance data metrics to scale resources accurately into new regions.</li>
-            </ul>
+                <!-- Interactive Preview Button -->
+                <div style="margin-bottom: 30px;">
+                    <button type="button" class="btn" onclick="toggleWebsiteViewer()">See Live Initiative Site[cite: 4]</button>
+                </div>
 
-            <div style="background-color: var(--color-light-bg); padding: 25px; border-radius: 4px; border-left: 4px solid var(--color-terracotta);">
-                <h4 style="color: var(--color-dark-blue); margin-bottom: 8px;">How You Can Support</h4>
-                <p style="font-size: 0.95rem; color: #555; margin-bottom: 15px;">Every project requires funding for physical building materials, educational supplies, and regional coordination teams.</p>
-                <a href="donate.html" class="btn">Support This Project</a>
+                <!-- Hidden Interactive Website Frame Container -->
+                <div id="website-viewer-container" class="preview-frame-wrapper" style="display: none;">
+                    <div class="preview-frame-header">
+                        <span>Live Preview: Safe Schools Initiative[cite: 4]</span>
+                        <button type="button" class="close-frame-btn" onclick="toggleWebsiteViewer()">✕ Close[cite: 4]</button>
+                    </div>
+                    <!-- Replace the src URL with the external site you wish to showcase -->
+                    <iframe 
+                        src="https://example.com" 
+                        title="Safe Schools External Project Site" 
+                        class="preview-iframe">
+                    </iframe>
+                </div>
+
+                <h3 class="initiative-objectives-title">Key Objectives & Actions[cite: 4]</h3>
+                <ul class="initiative-checklist">
+                    <li>Comprehensive audits of local school sanitation infrastructures[cite: 4].</li>
+                    <li>Installation of eco-conscious, private wash facilities tailored for privacy and comfort[cite: 4].</li>
+                    <li>Hosting recurring health, safety, and hygiene workshops led by regional advisors[cite: 4].</li>
+                    <li>Compiling performance data metrics to scale resources accurately into new regions[cite: 4].</li>
+                </ul>
+
+                <div class="initiative-action-callout">
+                    <h4>How You Can Support[cite: 4]</h4>
+                    <p>Every project requires funding for physical building materials, educational supplies, and regional coordination teams[cite: 4].</p>
+                    <a href="donate.html" class="btn">Support This Project[cite: 4]</a>
+                </div>
             </div>
         </div>
     </main>
@@ -72,7 +85,7 @@
                     <ul>
                         <li><a href="index.html">Home</a></li>
                         <li><a href="about.html">About Our Mission</a></li>
-                        <li><a href="projects.html">All Projects</a></li>
+                        <li><a href="project.html">All Projects</a></li>
                     </ul>
                 </div>
                 <div class="footer-column">
@@ -89,5 +102,17 @@
         </div>
     </footer>
 
+    <!-- JavaScript to Handle the Toggle Action -->
+    <script>
+        function toggleWebsiteViewer() {
+            const viewer = document.getElementById('website-viewer-container'); //[cite: 4]
+            if (viewer.style.display === 'none') { //[cite: 4]
+                viewer.style.display = 'block'; //[cite: 4]
+                viewer.scrollIntoView({ behavior: 'smooth' }); //[cite: 4]
+            } else { //[cite: 4]
+                viewer.style.display = 'none'; //[cite: 4]
+            } //[cite: 4]
+        } //[cite: 4]
+    </script>
 </body>
 </html>

@@ -3,59 +3,88 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Safe Schools, Safe Girls - Umoja Foundation</title>
-    <link rel="stylesheet" href="../style.css">
+    <title>Member Signup - Umoja Foundation</title>
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Link to your existing centralized stylesheet -->
+    <link rel="stylesheet" href="../src/style.css">
 </head>
 <body>
 
     <!-- HEADER / NAVIGATION SYSTEM-WIDE -->
     <header>
-       <div class="nav-container">
-            <a href="#" class="logo"><img src="../images/logo.png" alt="Umoja Foundation Logo"></a>
+        <div class="nav-container">
+            <a href="../index.html" class="logo">
+                <img src="../images/logo.png" alt="Umoja Foundation Logo" onerror="this.src='https://via.placeholder.com/140x40?text=UMOJA'">
+            </a>
             <ul class="nav-links">
                 <li><a href="../index.html">Home</a></li>
-                <li><a href="../about.html">About</a></li>
-                <li><a href="../donate.html">Donate</a></li>
-                <li><a href="../contact.html">Contact</a></li>
-                <li><a href="../project.html">Projects</a></li>
-                <li><a href="../signup.html">Member Signup</a></li>
-                <li><a href="../login.html">Admin Login</a></li>
-                <li><a href="../safe-schools.html">Safe Schools</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="project.html">Projects</a></li>
+                <li><a href="safe-schools.html">Safe Schools</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="signup.html" class="active">Member Signup</a></li>
+                <li><a href="donate.html" class="btn header-donate-btn">Donate</a></li>
             </ul>
         </div>
     </header>
 
-    <!-- INITIATIVE HERO HERO SECTION -->
-    <section class="about-hero" style="background: linear-gradient(rgba(30, 42, 56, 0.5), rgba(30, 42, 56, 0.5)), url('https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?q=80&w=1200') no-repeat center center/cover;">
-        <div class="container">
-            <div class="hero-box" style="max-width: 600px;">
-                <span class="featured-tag" style="color: #fff; margin-bottom: 5px;">Special Initiative</span>
-                <h1>Safe Schools, Safe Girls</h1>
+    <!-- MAIN SIGNUP CONTAINER SPLIT GRID -->
+    <main class="signup-page-wrapper">
+        <div class="signup-split-grid">
+            
+            <!-- Left Column: Community Empowerment Visual Narrative -->
+            <div class="signup-narrative-side">
+                <div class="narrative-overlay-content">
+                    <h1>BUILD BETTER FUTURES</h1>
+                    <p>Create your membership account to join our safe spaces network. Gain access to local project forums, campaign toolkits, community updates, and interactive impact dashboards.</p>
+                </div>
             </div>
-        </div>
-    </section>
 
-    <!-- CASE STUDY BRIEF -->
-    <main class="contact-main">
-        <div class="container" style="max-width: 800px; background: #fff; padding: 50px; border-radius: 4px; box-shadow: 0 4px 15px rgba(0,0,0,0.02);">
-            <h2 style="color: var(--color-dark-blue); margin-bottom: 20px;">Project Overview</h2>
-            <p style="font-size: 1.1rem; line-height: 1.7; color: #444; margin-bottom: 25px;">
-                The <strong>Safe Schools, Safe Girls</strong> initiative focuses heavily on driving academic equality by removing infrastructure-based barriers. Using precise data compilation, community partnerships, and rigorous school audits, we construct customized private sanitation layouts and deliver menstrual hygiene resources directly to rural academic environments.
-            </p>
+            <!-- Right Column: Interactive Onboarding Signup Form -->
+            <div class="signup-form-side">
+                <div class="signup-box-container">
+                    <div class="signup-form-header">
+                        <h2>BECOME A MEMBER</h2>
+                        <p class="form-subtext">Sign up to get started and support our initiatives.</p>
+                    </div>
+                    
+                    <form action="#" method="POST" class="umoja-signup-form">
+                        <div class="form-group">
+                            <label for="signup-name">Full Name</label>
+                            <input type="text" id="signup-name" name="name" placeholder="First and last name" required>
+                        </div>
 
-            <h3 style="color: var(--color-dark-blue); margin-bottom: 15px;">Key Objectives & Actions</h3>
-            <ul style="margin-left: 20px; margin-bottom: 30px; color: #555; line-height: 1.8;">
-                <li>Comprehensive audits of local school sanitation infrastructures.</li>
-                <li>Installation of eco-conscious, private wash facilities tailored for privacy and comfort.</li>
-                <li>Hosting recurring health, safety, and hygiene workshops led by regional advisors.</li>
-                <li>Compiling performance data metrics to scale resources accurately into new regions.</li>
-            </ul>
+                        <div class="form-group">
+                            <label for="signup-email">Email Address</label>
+                            <input type="email" id="signup-email" name="email" placeholder="email@example.com" required>
+                        </div>
 
-            <div style="background-color: var(--color-light-bg); padding: 25px; border-radius: 4px; border-left: 4px solid var(--color-terracotta);">
-                <h4 style="color: var(--color-dark-blue); margin-bottom: 8px;">How You Can Support</h4>
-                <p style="font-size: 0.95rem; color: #555; margin-bottom: 15px;">Every project requires funding for physical building materials, educational supplies, and regional coordination teams.</p>
-                <a href="donate.html" class="btn">Support This Project</a>
+                        <div class="form-group">
+                            <label for="signup-password">Password</label>
+                            <input type="password" id="signup-password" name="password" placeholder="Min. 8 characters" required>
+                        </div>
+
+                        <div class="form-group checkbox-group">
+                            <input type="checkbox" id="terms-agree" name="terms" required>
+                            <label for="terms-agree" class="checkbox-label">
+                                I agree to the <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a>.
+                            </label>
+                        </div>
+
+                        <!-- Action Submit Trigger -->
+                        <button type="submit" class="btn btn-signup-submit">Create Account</button>
+                    </form>
+
+                    <!-- Alternative Route Navigation -->
+                    <div class="form-login-prompt">
+                        <p>Already a member? <a href="login.html">Admin Login here</a></p>
+                    </div>
+                </div>
             </div>
+
         </div>
     </main>
 
@@ -72,7 +101,7 @@
                     <ul>
                         <li><a href="index.html">Home</a></li>
                         <li><a href="about.html">About Our Mission</a></li>
-                        <li><a href="projects.html">All Projects</a></li>
+                        <li><a href="project.html">All Projects</a></li>
                     </ul>
                 </div>
                 <div class="footer-column">
