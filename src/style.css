@@ -106,7 +106,7 @@ header {
 .hero {
     position: relative;
     background: linear-gradient(rgba(30, 42, 56, 0.55), rgba(30, 42, 56, 0.55)), 
-                url('https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?q=80&w=1200') no-repeat center center/cover;
+                url('../images/Hero.jpg') no-repeat center center/cover;
     height: 480px;
     display: flex;
     align-items: center;
@@ -266,7 +266,7 @@ footer {
 .about-hero {
     position: relative;
     background: linear-gradient(rgba(30, 42, 56, 0.4), rgba(30, 42, 56, 0.4)), 
-                url('https://images.unsplash.com/photo-1524178232363-1fb2b075b655?q=80&w=1200') no-repeat center center/cover;
+                url('../images/About\ d.jpg') no-repeat center center/cover;
     height: 440px;
     display: flex;
     align-items: center;
@@ -709,7 +709,7 @@ footer {
 .login-narrative-side {
     position: relative;
     background: linear-gradient(rgba(30, 42, 56, 0.75), rgba(30, 42, 56, 0.75)), 
-                url('https://images.unsplash.com/photo-1509062522246-3755977927d7?q=80&w=800') no-repeat center center/cover;
+                url('../images/Login.jpg') no-repeat center center/cover;
     padding: 60px;
     display: flex;
     align-items: center;
@@ -1026,7 +1026,7 @@ footer {
 .signup-narrative-side {
     position: relative;
     background: linear-gradient(rgba(30, 42, 56, 0.75), rgba(30, 42, 56, 0.75)), 
-                url('https://images.unsplash.com/photo-1524178232363-1fb2b075b655?q=80&w=800') no-repeat center center/cover;
+                url('../images/Signup.jpg') no-repeat center center/cover;
     padding: 60px;
     display: flex;
     align-items: center;
